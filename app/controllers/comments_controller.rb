@@ -28,7 +28,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:notice] = "Comment has been updated."
-      redirect_to root_path
+      redirect_to @post
     else
       flash.now[:alert] = "There was an error updating that comment. Please try again."
       render :edit

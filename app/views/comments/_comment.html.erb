@@ -10,9 +10,5 @@
     <%= link_to "delete comment", post_comment_path(@post,comment),
       method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "Are you sure you want to delete this comment?"} %>
       <%= link_to "edit comment", edit_post_comment_path(@post,comment), class: "btn btn-primary btn-sm" %>
-      <p></p>
   <% end %>
-<% end %>
-<% if current_user %>
-  <%= render 'comments/form', comment: Comment.new, post: @post %>
 <% end %>

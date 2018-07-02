@@ -7,6 +7,10 @@
     <%= f.label :body %>
     <%= f.cktext_area :body, class: "form-control"  %>
   </div><br>
+  <div class="file-field">
+    <%= f.label :cover %>
+    <%= f.file_field :cover %>
+  </div>
   <div class="form-field">
     <%= f.submit "Save", class: "btn btn-primary" %>
   </div><br>

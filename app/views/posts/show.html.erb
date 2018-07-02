@@ -2,5 +2,12 @@
   <div class="post-show-blog">
     <h1 class="prev-title-font font-italic"><%= @post.title %></h1>
     <p><%= raw @post.body %></p>
+    <%= link_to "Show comments", post_path(@post), class: "comments#{@post.id}", remote: true %>
+    <p class="text-muted"><%= @post.comments.size %> comments</p>
+    <div class="comments-display<%=@post.id%>"></div>
   </div>
 </div>
+
+<% if current_user %>
+  <%= render 'comments/form', comment: Comment.new, post: @post %>
+<% end %>

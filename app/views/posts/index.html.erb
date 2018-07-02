@@ -16,6 +16,9 @@
     <% end %>
   </div>
   <div class="row">
+    <%= image_tag(post.cover.url, class: "cover-image") if post.cover? %>
+  </div>
+  <div class="row">
     <p><%= post.title %></p>
     <div class="read-post-btn-div">
       <%= link_to "Read Post", post_path(post), class: "btn btn-primary" %><br>
