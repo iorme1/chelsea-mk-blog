@@ -1,0 +1,11 @@
+<h3> Edit your comment for this post </h3><br>
+
+<%= form_for [@post,@comment] do |f| %>
+  <div class="form-field">
+    <%= f.text_area :body, class: 'form-control' %>
+  </div>
+
+  <div class="form-field">
+    <%= f.submit "Update Comment", class: "btn btn-primary" %>
+  </div>
+<% end %>

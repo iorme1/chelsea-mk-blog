@@ -1,0 +1,10 @@
+<h3> Add a comment for this post </h3>
+<%= form_for [post,comment] do |f| %>
+  <div class="form-field">
+    <%= f.text_area :body, class: 'form-control' %>
+  </div><br>
+
+  <div class="form-field">
+    <%= f.submit "Add Comment", class: "btn-custom1" %>
+  </div><br>
+<% end %>
