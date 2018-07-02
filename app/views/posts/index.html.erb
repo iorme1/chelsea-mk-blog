@@ -1,2 +1,24 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<br>
+<% if current_user && current_user.admin? %>
+  <div class="col-md-4 text-center">
+    <%= link_to "Create New Post", new_post_path, class: "btn btn-primary" %>
+  </div><br>
+<% end %>
+
+
+<% @posts.each do |post| %>
+  <div class="row">
+    <% if current_user && current_user.admin? %>
+      <%= link_to "delete", post_path(post), method: :delete, class: "btn btn-danger btn-sm",
+      data: { confirm: "Are you sure you want to delete this blog post?" } %>
+      <%= link_to "edit", edit_post_path(post), class: "btn btn-primary btn-sm" %>
+      <p></p><br/>
+    <% end %>
+  </div>
+  <div class="row">
+    <p><%= post.title %></p>
+    <div class="read-post-btn-div">
+      <%= link_to "Read Post", post_path(post), class: "btn btn-primary" %><br>
+    </div>
+  </div>
+<% end %>

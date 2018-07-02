@@ -49,4 +49,21 @@ class PostsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :body)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  def authorize_user
+    unless current_user.admin?
+      flash[:alert] = "You must be an admin to do that."
+      redirect_to root_path
+    end
+  end
 end
