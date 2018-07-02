@@ -11,6 +11,8 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.1.1'
 gem 'devise'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
