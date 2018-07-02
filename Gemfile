@@ -11,6 +11,9 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem 'devise'
