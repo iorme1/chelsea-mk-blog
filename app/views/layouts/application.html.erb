@@ -9,7 +9,32 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="<%= controller_name %> <%= action_name %>">
+
+    <nav class="navbar navbar-expand-sm navbar-light navvy">
+      <%= link_to "Gals Who Glow", root_path, class: "navbar-brand navbar-font font-italic" %>
+      <button class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ml-auto font-italic">
+          <li class="nav-item"><%= link_to "About", root_path, class: "nav-link nav-link-font" %></li>
+          <li class="nav-item"><%= link_to "Sign up", new_user_registration_path, class: "nav-link nav-link-font" %></li>
+          <li class="nav-item"><%= link_to "Login",  new_user_session_path, class: "nav-link nav-link-font" %></li>
+          <% if current_user %>
+            <li class="nav-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link nav-link-font" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="flash">
+      <%= render 'layouts/messages' %>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+    
   </body>
 </html>
