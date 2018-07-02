@@ -10,4 +10,6 @@
 
 <% if current_user %>
   <%= render 'comments/form', comment: Comment.new, post: @post %>
+<% else %>
+  <h4>Sign up to comment! It's free, simple, and very fast.</h4>
 <% end %>
