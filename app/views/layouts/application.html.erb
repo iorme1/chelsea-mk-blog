@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
@@ -21,6 +22,7 @@
           <% if current_user %>
             <li class="nav-item"><%= link_to "About", root_path, class: "nav-link nav-link-font" %></li>
             <li class="nav-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link nav-link-font" %></li>
+            <li class="nav-item"><%= link_to "Account", edit_user_registration_path, class: "nav-link nav-link-font" %></li>
           <% else %>
             <li class="nav-item"><%= link_to "About", root_path, class: "nav-link nav-link-font" %></li>
             <li class="nav-item"><%= link_to "Sign up", new_user_registration_path, class: "nav-link nav-link-font" %></li>

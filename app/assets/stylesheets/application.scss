@@ -15,28 +15,46 @@
  */
 @import "bootstrap";
 
+/* global */
 html {
   margin: 0;
   padding: 0;
   min-height: 100%;
 }
-
+/* global */
 body {
   min-height: 100%;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
 }
-
+/* post show */
 body.posts.show > .navbar {
   height: 60px;
 }
 
+/* global btn */
+.cool-btn {
+  border-color: #f7a6ee;
+  color: #f7a6ee;
+  background: {
+    position: 100%;
+    size: 400%;
+  }
+  transition: background 300ms ease-in-out;
+  &:hover {
+    background: #f7a6ee;
+    color: white;
+  }
+}
+
+/* only posts#index */
 .sidey {
   padding-top: 25px;
 }
 
-.prev-title-font {
+/* post#index post#show */
+.title-font {
   font-family: "Georgia";
   font-size: 30px;
   letter-spacing: 4px;
@@ -45,7 +63,8 @@ body.posts.show > .navbar {
   text-shadow: 0.8px 1.6px 2.1px black;
 }
 
-.leave-cmnt {
+/*post show */
+.comment-notes {
   font-family: "Georgia";
   color: #f7a6ee;
   font-weight: bold;
@@ -53,6 +72,7 @@ body.posts.show > .navbar {
   letter-spacing: 2px;
 }
 
+/* global */
 .navbar-font {
   font-family: "Georgia" !important;
   color: white !important;
@@ -60,33 +80,25 @@ body.posts.show > .navbar {
   font-weight: bold !important;
   text-shadow: 1px 2px 3px black;
 }
-
+/* global */
 .nav-link:hover {
   color: pink !important;
 }
+/* global */
 .navbar-brand:hover {
   color: pink !important;
 }
+/* global */
 .main-nav-item {
   font-size: 40px;
   margin-right: 700px;
 }
 
+/* post index */
 .read-post-btn-div {
   margin-bottom: 20px;
 }
-
-.btn3d.btn-primary {
-	box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #4D5BBE, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
-	background-color: #4274D7;
-}
-
-.btn3d.btn-primary:active,
-.btn3d.btn-primary.active {
-	box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
-	background-color: #4274D7;
-}
-
+/* global */
 .navvy {
   background-image: url('navbar.png');
   background-repeat: no-repeat;
@@ -95,36 +107,32 @@ body.posts.show > .navbar {
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-
+/* global */
 .custom-toggler.navbar-toggler {
   border-color: rgb(255,102,203);
   background-color: white;
 }
 
-.shrink {
-  transform: scale(0)
-}
-
-.sidebar-offset {
-  top: 75px !important;
-}
-
+/* global */
 .bottom-border {
   border-bottom: 1px solid pink;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
+/* post show */
 .post-show-blog {
-  margin-top: 100px;
+  margin-top: 50px;
   padding: 35px;
 }
 
+/* post show */
 .post-show-blog > h1 {
   text-align: center;
   font-size: 40px;
 }
 
+/* post index */
 .cover-image {
   width:200px;
   height:auto;
@@ -133,7 +141,7 @@ body.posts.show > .navbar {
   border: solid 1px black;
   box-shadow: 1px 1px 2px 3px black;
 }
-
+/* post index */
 .media-name {
   font-family: "Georgia";
   font-size: 24px;
@@ -142,16 +150,16 @@ body.posts.show > .navbar {
   font-weight: bold;
   text-shadow: 0.7px 1.4px 2px black;
 }
-
+/* post index */
 .image-div {
   text-align: center;
 }
-
+/* post index */
 .facebook {
   border:1px solid black;
   box-shadow:1px 1px 2px 3px black;
 }
-
+/* post index */
 .nav-link-font {
   font-family: "Georgia" !important;
   color: white !important;
@@ -159,6 +167,25 @@ body.posts.show > .navbar {
   font-weight: bold !important;
   text-shadow: 0.7px 1.5px 2.1px black;
 }
+
+.top-marg {
+  margin-top: 20px;
+}
+
+/* global */
+.devise-forms {
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #f7a6ee;
+  margin-top: 20px;
+  width: 300px;
+  padding: 20px;
+  background-color: #cce6ff;
+  -webkit-box-shadow: 2px 2px 4px 5px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    2px 2px 4px 5px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         2px 2px 4px 5px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
 @media only screen and (max-width: 768px) {
   .sidey {
     position: static !important;
@@ -174,7 +201,6 @@ body.posts.show > .navbar {
   .preview-blog-text > p {
     text-align: left center;
   }
-
   .navvy {
     height: auto !important;
   }
