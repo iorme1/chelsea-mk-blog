@@ -14,3 +14,168 @@
  *= require_self
  */
 @import "bootstrap";
+
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body.posts.show > .navbar {
+  height: 60px;
+}
+
+.sidey {
+  padding-top: 25px;
+}
+
+.prev-title-font {
+  font-family: "Georgia";
+  font-size: 30px;
+  letter-spacing: 4px;
+  color: #f7a6ee;
+  font-weight: bold;
+  text-shadow: 0.8px 1.6px 2.1px black;
+}
+
+.leave-cmnt {
+  font-family: "Georgia";
+  color: #f7a6ee;
+  font-weight: bold;
+  text-shadow: 0.6px 1.1px 1.6px black;
+  letter-spacing: 2px;
+}
+
+.navbar-font {
+  font-family: "Georgia" !important;
+  color: white !important;
+  font-size: 30px;
+  font-weight: bold !important;
+  text-shadow: 1px 2px 3px black;
+}
+
+.nav-link:hover {
+  color: pink !important;
+}
+.navbar-brand:hover {
+  color: pink !important;
+}
+.main-nav-item {
+  font-size: 40px;
+  margin-right: 700px;
+}
+
+.read-post-btn-div {
+  margin-bottom: 20px;
+}
+
+.btn3d.btn-primary {
+	box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #4D5BBE, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
+	background-color: #4274D7;
+}
+
+.btn3d.btn-primary:active,
+.btn3d.btn-primary.active {
+	box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+	background-color: #4274D7;
+}
+
+.navvy {
+  background-image: url('navbar.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255,102,203);
+  background-color: white;
+}
+
+.shrink {
+  transform: scale(0)
+}
+
+.sidebar-offset {
+  top: 75px !important;
+}
+
+.bottom-border {
+  border-bottom: 1px solid pink;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.post-show-blog {
+  margin-top: 100px;
+  padding: 35px;
+}
+
+.post-show-blog > h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.cover-image {
+  width:200px;
+  height:auto;
+  margin-right:10px;
+  margin-bottom: 10px;
+  border: solid 1px black;
+  box-shadow: 1px 1px 2px 3px black;
+}
+
+.media-name {
+  font-family: "Georgia";
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: #f7a6ee;
+  font-weight: bold;
+  text-shadow: 0.7px 1.4px 2px black;
+}
+
+.image-div {
+  text-align: center;
+}
+
+.facebook {
+  border:1px solid black;
+  box-shadow:1px 1px 2px 3px black;
+}
+
+.nav-link-font {
+  font-family: "Georgia" !important;
+  color: white !important;
+  font-size: 16px;
+  font-weight: bold !important;
+  text-shadow: 0.7px 1.5px 2.1px black;
+}
+@media only screen and (max-width: 768px) {
+  .sidey {
+    position: static !important;
+  }
+  .cover-image {
+    width: 300px !important;
+  }
+
+  .preview-div {
+    text-align: center;
+  }
+
+  .preview-blog-text > p {
+    text-align: left center;
+  }
+
+  .navvy {
+    height: auto !important;
+  }
+}

@@ -1,10 +1,10 @@
-<h3> Add a comment for this post </h3>
+<h3 class="font-italic leave-cmnt"> Leave a comment </h3>
 <%= form_for [post,comment] do |f| %>
   <div class="form-field">
     <%= f.text_area :body, class: 'form-control' %>
   </div><br>
 
   <div class="form-field">
-    <%= f.submit "Add Comment", class: "btn-custom1" %>
+    <%= f.submit "Add Comment", class: "btn btn-primary btn-sm btn3d" %>
   </div><br>
 <% end %>
