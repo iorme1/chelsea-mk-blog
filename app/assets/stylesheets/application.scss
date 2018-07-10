@@ -51,6 +51,10 @@ body.posts.show > .navbar {
 /* only posts#index */
 .sidey {
   padding-top: 25px;
+  border: 1px solid pink;
+  background-color: #cce6ff;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 /* post#index post#show */
@@ -134,12 +138,9 @@ body.posts.show > .navbar {
 
 /* post index */
 .cover-image {
-  width:200px;
-  height:auto;
-  margin-right:10px;
-  margin-bottom: 10px;
-  border: solid 1px black;
-  box-shadow: 1px 1px 2px 3px black;
+  height: auto;
+  width: 100%;;
+  padding: 0px;
 }
 /* post index */
 .media-name {
@@ -152,7 +153,23 @@ body.posts.show > .navbar {
 }
 /* post index */
 .image-div {
+  height: 225px;
+  width: 100%;
+  overflow: hidden;
   text-align: center;
+  margin: 0 auto;
+}
+
+.preview-div {
+
+}
+.blog:after {
+  content: "";
+  border: 1px solid pink;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: block;
 }
 /* post index */
 .facebook {
@@ -185,17 +202,30 @@ body.posts.show > .navbar {
   -moz-box-shadow:    2px 2px 4px 5px #ccc;  /* Firefox 3.5 - 3.6 */
   box-shadow:         2px 2px 4px 5px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
+/* post index */
+.create-post-btn {
+  margin: 0 auto;
+}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .sidey {
     position: static !important;
   }
   .cover-image {
-    width: 300px !important;
+    margin-bottom: 20px;
+    text-align: left;
   }
 
   .preview-div {
+    margin-top: 20px;
     text-align: center;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .image-div {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .preview-blog-text > p {
@@ -203,5 +233,13 @@ body.posts.show > .navbar {
   }
   .navvy {
     height: auto !important;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .preview-div {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }

@@ -11,6 +11,10 @@
     <%= f.label :cover %>
     <%= f.file_field :cover %>
   </div><br>
+  <div class="file-field">
+    <%= f.label "Save as Draft" %>
+    <%= f.check_box :draft %>
+  </div><br>
   <div class="form-field">
     <%= f.submit "Save", class: "btn cool-btn" %>
   </div><br>

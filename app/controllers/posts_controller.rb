@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authorize_user, except: [:index, :show]
 
   def index
-    @posts = Post.all
+    @posts = Post.where(draft: [nil, false])
   end
 
   def show
@@ -50,10 +50,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def draft
+    @drafts = Post.where(draft: true)
+  end
+
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :cover)
+    params.require(:post).permit(:title, :body, :cover, :draft)
   end
 
   def set_post
