@@ -48,6 +48,14 @@ body.posts.show > .navbar {
   }
 }
 
+/* global */
+
+.cust-nav-item {
+  border-bottom: 2px ridge white;
+  margin-right: 10px;
+  text-align: center;
+}
+
 /* only posts#index */
 .sidey {
   padding-top: 25px;

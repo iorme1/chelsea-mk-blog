@@ -26,16 +26,16 @@
         <div class="collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav ml-auto font-italic">
             <% if current_user && current_user.admin? %>
-              <li class="nav-item"><%= link_to "Drafts", draft_posts_path, class: "nav-link nav-link-font" %></li>
+              <li class="nav-item cust-nav-item"><%= link_to "Drafts", draft_posts_path, class: "nav-link nav-link-font" %></li>
             <% end %>
             <% if current_user %>
-              <li class="nav-item"><%= link_to "About", root_path, class: "nav-link nav-link-font" %></li>
-              <li class="nav-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link nav-link-font" %></li>
-              <li class="nav-item"><%= link_to "Account", edit_user_registration_path, class: "nav-link nav-link-font" %></li>
+              <li class="nav-item cust-nav-item"><%= link_to "Home", root_path, class: "nav-link nav-link-font" %></li>
+              <li class="nav-item cust-nav-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link nav-link-font" %></li>
+              <li class="nav-item cust-nav-item"><%= link_to "#{current_user.email}", edit_user_registration_path, class: "nav-link nav-link-font" %></li>
             <% else %>
-              <li class="nav-item"><%= link_to "About", root_path, class: "nav-link nav-link-font" %></li>
-              <li class="nav-item"><%= link_to "Sign up", new_user_registration_path, class: "nav-link nav-link-font" %></li>
-              <li class="nav-item"><%= link_to "Login",  new_user_session_path, class: "nav-link nav-link-font" %></li>
+              <li class="nav-item cust-nav-item"><%= link_to "About", root_path, class: "nav-link nav-link-font" %></li>
+              <li class="nav-item cust-nav-item"><%= link_to "Sign up", new_user_registration_path, class: "nav-link nav-link-font" %></li>
+              <li class="nav-item cust-nav-item"><%= link_to "Login",  new_user_session_path, class: "nav-link nav-link-font" %></li>
             <% end %>
           </ul>
         </div>

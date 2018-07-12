@@ -3,7 +3,7 @@
 <% meta_tag :description, @post.body.truncate(150) %>
 <% meta_tag :keywords, @post.title.split.join(',') %>
 
-<div class="container">
+<main class="container">
   <div class="row">
     <div class="post-show-blog">
       <h1 class="title-font font-italic"><%= @post.title %></h1>
@@ -19,4 +19,4 @@
   <% else %>
     <h4 class="comment-notes font-italic">Please sign up to comment</h4>
   <% end %>
-</div>
+</main>
