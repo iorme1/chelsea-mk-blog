@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ChelseaMkBlog</title>
+    <title>
+      <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+      Gals Who Glow
+    </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name='description'
+      content='<%= yield_meta_tag(:description, 'Default description') %>' />
+    <meta name='keywords'
+      content='<%= yield_meta_tag(:keywords, 'defaults,ruby,rails') %>' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
-
-    <nav class="navbar navbar-expand-sm navbar-light navvy">
-      <%= link_to "Gals Who Glow", root_path, class: "navbar-brand navbar-font font-italic" %>
-      <button class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarMenu">
-        <ul class="navbar-nav ml-auto font-italic">
-          <% if current_user && current_user.admin? %>
-            <li class="nav-item"><%= link_to "Drafts", draft_posts_path, class: "nav-link nav-link-font" %></li>
-          <% end %>
-          <% if current_user %>
-            <li class="nav-item"><%= link_to "About", root_path, class: "nav-link nav-link-font" %></li>
-            <li class="nav-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link nav-link-font" %></li>
-            <li class="nav-item"><%= link_to "Account", edit_user_registration_path, class: "nav-link nav-link-font" %></li>
-          <% else %>
-            <li class="nav-item"><%= link_to "About", root_path, class: "nav-link nav-link-font" %></li>
-            <li class="nav-item"><%= link_to "Sign up", new_user_registration_path, class: "nav-link nav-link-font" %></li>
-            <li class="nav-item"><%= link_to "Login",  new_user_session_path, class: "nav-link nav-link-font" %></li>
-          <% end %>
-        </ul>
-      </div>
-    </nav>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light navvy">
+        <%= link_to "Gals Who Glow", root_path, class: "navbar-brand navbar-font font-italic" %>
+        <button class="navbar-toggler custom-toggler" data-toggle="collapse" data-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ml-auto font-italic">
+            <% if current_user && current_user.admin? %>
+              <li class="nav-item"><%= link_to "Drafts", draft_posts_path, class: "nav-link nav-link-font" %></li>
+            <% end %>
+            <% if current_user %>
+              <li class="nav-item"><%= link_to "About", root_path, class: "nav-link nav-link-font" %></li>
+              <li class="nav-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link nav-link-font" %></li>
+              <li class="nav-item"><%= link_to "Account", edit_user_registration_path, class: "nav-link nav-link-font" %></li>
+            <% else %>
+              <li class="nav-item"><%= link_to "About", root_path, class: "nav-link nav-link-font" %></li>
+              <li class="nav-item"><%= link_to "Sign up", new_user_registration_path, class: "nav-link nav-link-font" %></li>
+              <li class="nav-item"><%= link_to "Login",  new_user_session_path, class: "nav-link nav-link-font" %></li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <div class="flash">
       <%= render 'layouts/messages' %>

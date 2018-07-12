@@ -11,6 +11,7 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
