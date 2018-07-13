@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
-
   before_action :authorize_user, except: [:index]
+  before_action :set_post, only: [:create, :destroy]
+  before_action :set_comment, only: [:edit, :update,]
 
   def create
-    @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
     @comment.user = current_user
 
@@ -17,12 +17,10 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @comment = Comment.find(params[:id])
     @post = @comment.post
   end
 
   def update
-    @comment = Comment.find(params[:id])
     @post = @comment.post
     @comment.assign_attributes(comment_params)
 
@@ -36,7 +34,6 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
 
     if @comment.destroy
@@ -53,6 +50,14 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:body)
+  end
+
+  def set_post
+    @post = Post.friendly.find(params[:post_id])
+  end
+
+  def set_comment
+    @comment = Comment.find(params[:id])
   end
 
   def authorize_user
