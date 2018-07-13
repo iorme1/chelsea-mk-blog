@@ -35,16 +35,16 @@ body.posts.show > .navbar {
 
 /* global btn */
 .cool-btn {
-  border-color: #f7a6ee;
-  color: #f7a6ee;
+  border-color: #e3747a;
+  color: #e3747a;
   background: {
     position: 100%;
     size: 400%;
   }
   transition: background 300ms ease-in-out;
   &:hover {
-    background: #f7a6ee;
-    color: white;
+    background: #e3747a;
+    color:white;
   }
 }
 
@@ -59,8 +59,10 @@ body.posts.show > .navbar {
 /* only posts#index */
 .sidey {
   padding-top: 25px;
-  border: 1px solid pink;
-  background-color: #cce6ff;
+  /*border: 1px solid pink;
+  background-color: #cce6ff; */
+  border: 1px solid black;
+  background-color: #12a9b0;
   margin: 0 auto;
   margin-bottom: 30px;
 }
@@ -70,15 +72,16 @@ body.posts.show > .navbar {
   font-family: "Georgia";
   font-size: 30px;
   letter-spacing: 4px;
-  color: #f7a6ee;
+  /*color: #f7a6ee;*/
+  color: #e3747a;
   font-weight: bold;
-  text-shadow: 0.8px 1.6px 2.1px black;
+  text-shadow: 0.8px 1.6px 2.1px #a5bdc1;
 }
 
 /*post show */
 .comment-notes {
   font-family: "Georgia";
-  color: #f7a6ee;
+  color: #e3747a;
   font-weight: bold;
   text-shadow: 0.6px 1.1px 1.6px black;
   letter-spacing: 2px;
@@ -94,11 +97,11 @@ body.posts.show > .navbar {
 }
 /* global */
 .nav-link:hover {
-  color: pink !important;
+  color: #e3747a !important;
 }
 /* global */
 .navbar-brand:hover {
-  color: pink !important;
+  color: #e3747a !important;
 }
 /* global */
 .main-nav-item {
@@ -112,7 +115,8 @@ body.posts.show > .navbar {
 }
 /* global */
 .navvy {
-  background-image: url('navbar.png');
+  /*background-image: url('navbar.png'); */
+  background-image: linear-gradient(#12a9b0,#a5bdc1);
   background-repeat: no-repeat;
   background-size: cover;
   height: 120px;
@@ -127,7 +131,7 @@ body.posts.show > .navbar {
 
 /* global */
 .bottom-border {
-  border-bottom: 1px solid pink;
+  border-bottom: 1px solid #3458b5;  /*pink; */
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -155,9 +159,10 @@ body.posts.show > .navbar {
   font-family: "Georgia";
   font-size: 24px;
   letter-spacing: 4px;
-  color: #f7a6ee;
+  /*color: #f7a6ee; */
+  color: #002f43;
   font-weight: bold;
-  text-shadow: 0.7px 1.4px 2px black;
+  text-shadow: 0.7px 1.4px 2px grey;
 }
 /* post index */
 .image-div {
@@ -171,9 +176,10 @@ body.posts.show > .navbar {
 .preview-div {
 
 }
+
 .blog:after {
   content: "";
-  border: 1px solid pink;
+  border: 1px solid #e3747a;
   width: 75%;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -201,14 +207,24 @@ body.posts.show > .navbar {
 .devise-forms {
   text-align: center;
   margin: 0 auto;
-  border: 1px solid #f7a6ee;
+  border: 1px solid black;
   margin-top: 20px;
   width: 300px;
   padding: 20px;
-  background-color: #cce6ff;
+  background-color: #12a9b0;
   -webkit-box-shadow: 2px 2px 4px 5px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    2px 2px 4px 5px #ccc;  /* Firefox 3.5 - 3.6 */
   box-shadow:         2px 2px 4px 5px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.devise-title-font {
+  font-family: "Georgia";
+  font-size: 30px;
+  font-style: italic;
+  letter-spacing: 4px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0.8px 1.6px 2.1px black;
 }
 /* post index */
 .create-post-btn {
