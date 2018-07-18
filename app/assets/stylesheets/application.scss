@@ -170,8 +170,9 @@ body.posts.show > .navbar {
   overflow: hidden;
   text-align: center;
   margin: 0 auto;
-} 
+}
 
+/* post index */
 .blog:after {
   content: "";
   border: 1px solid #ea9fd7;
@@ -239,9 +240,13 @@ body.posts.show > .navbar {
     text-align: left;
   }
 
+  .main-container {
+    padding: 50px;
+  }
+
   .preview-div {
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
     padding-right: 25px;
     padding-left: 25px;
   }
@@ -264,5 +269,8 @@ body.posts.show > .navbar {
   .preview-div {
     padding-left: 50px;
     padding-right: 50px;
+  }
+  .main-container {
+    padding: 0px;
   }
 }

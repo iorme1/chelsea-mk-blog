@@ -1,7 +1,7 @@
 <% if @posts.blank? %>
   <h4 class="comment-notes">There are no posts containing the term: <%= params[:search] %></h4>
 <% end %>
-<div class="top-marg container-fluid">
+<div class="top-marg main-container container-fluid">
   <div class="text-center sticky-top float-lg-right sidey col-md-8 col-lg-3 col-sm-8 col-xs-12">
     <h4 class="media-name">INSTAGRAM</h4>
     <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/944939dc14a1592b80e01e675952c041.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:1px solid black;box-shadow:1px 1px 2px 3px black;overflow:hidden;"></iframe>
@@ -37,7 +37,7 @@
               <p><%= raw post.body.truncate(250) %></p>
             </div>
             <div class="read-post-btn-div">
-              <%= link_to post_path(post), :class => "btn btn-lg cool-btn"  do %>
+              <%= link_to post_path(post), :class => "read-post btn cool-btn"  do %>
                 Read Post
               <% end %>
             </div>
