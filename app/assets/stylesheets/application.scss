@@ -35,21 +35,20 @@ body.posts.show > .navbar {
 
 /* global btn */
 .cool-btn {
-  border-color: #e3747a;
-  color: #e3747a;
+  border-color: #ea9fd7;
+  color: #ea9fd7;
   background: {
     position: 100%;
     size: 400%;
+    color:white;
   }
   transition: background 300ms ease-in-out;
   &:hover {
-    background: #e3747a;
+    background: #ea9fd7;
     color:white;
   }
 }
-
 /* global */
-
 .cust-nav-item {
   border-bottom: 2px ridge white;
   margin-right: 10px;
@@ -59,10 +58,10 @@ body.posts.show > .navbar {
 /* only posts#index */
 .sidey {
   padding-top: 25px;
-  /*border: 1px solid pink;
-  background-color: #cce6ff; */
   border: 1px solid black;
-  background-color: #12a9b0;
+  background-image: url('navbar.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto;
   margin-bottom: 30px;
 }
@@ -72,21 +71,23 @@ body.posts.show > .navbar {
   font-family: "Georgia";
   font-size: 30px;
   letter-spacing: 4px;
-  /*color: #f7a6ee;*/
-  color: #e3747a;
+  color: #ea9fd7;
   font-weight: bold;
-  text-shadow: 0.8px 1.6px 2.1px #a5bdc1;
+  text-shadow: 0.8px 1.6px 2.1px black;
 }
 
 /*post show */
 .comment-notes {
   font-family: "Georgia";
-  color: #e3747a;
+  color: #ea9fd7;
   font-weight: bold;
   text-shadow: 0.6px 1.1px 1.6px black;
   letter-spacing: 2px;
 }
-
+/* posts show */
+.comment-section {
+  padding: 20px;
+}
 /* global */
 .navbar-font {
   font-family: "Georgia" !important;
@@ -97,11 +98,11 @@ body.posts.show > .navbar {
 }
 /* global */
 .nav-link:hover {
-  color: #e3747a !important;
+  color: #ea9fd7 !important;
 }
 /* global */
 .navbar-brand:hover {
-  color: #e3747a !important;
+  color: #ea9fd7 !important;
 }
 /* global */
 .main-nav-item {
@@ -115,8 +116,7 @@ body.posts.show > .navbar {
 }
 /* global */
 .navvy {
-  /*background-image: url('navbar.png'); */
-  background-image: linear-gradient(#12a9b0,#a5bdc1);
+  background-image: url('navbar.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 120px;
@@ -159,10 +159,9 @@ body.posts.show > .navbar {
   font-family: "Georgia";
   font-size: 24px;
   letter-spacing: 4px;
-  /*color: #f7a6ee; */
-  color: #002f43;
+  color: white;
   font-weight: bold;
-  text-shadow: 0.7px 1.4px 2px grey;
+  text-shadow: 1px 2px 3px black;
 }
 /* post index */
 .image-div {
@@ -173,13 +172,13 @@ body.posts.show > .navbar {
   margin: 0 auto;
 }
 
-.preview-div {
+.preview-blog-text {
 
 }
 
 .blog:after {
   content: "";
-  border: 1px solid #e3747a;
+  border: 1px solid #ea9fd7;
   width: 75%;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -211,7 +210,8 @@ body.posts.show > .navbar {
   margin-top: 20px;
   width: 300px;
   padding: 20px;
-  background-color: #12a9b0;
+  background-image: url('navbar.png');
+  background-size: cover;
   -webkit-box-shadow: 2px 2px 4px 5px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    2px 2px 4px 5px #ccc;  /* Firefox 3.5 - 3.6 */
   box-shadow:         2px 2px 4px 5px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
