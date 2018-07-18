@@ -6,4 +6,8 @@ class Post < ApplicationRecord
   has_many :comments
 
   mount_uploader :cover, BlogImageUploader
+
+  def self.search(search)
+    where("title LIKE ? OR body LIKE ?", "%#{search}%", "%#{search}%") 
+  end
 end

@@ -3,7 +3,11 @@ class PostsController < ApplicationController
   before_action :authorize_user, except: [:index, :show]
 
   def index
-    @posts = Post.where(draft: [nil, false])
+    if params[:search]
+      @posts = Post.where(draft: [nil, false]).search(params[:search]).order("created_at DESC")
+    else
+      @posts = Post.where(draft: [nil, false]).order("created_at DESC")
+    end
   end
 
   def show
