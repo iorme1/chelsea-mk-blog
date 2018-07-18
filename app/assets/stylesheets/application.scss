@@ -229,8 +229,12 @@ body.posts.show > .navbar {
 }
 
 /* global */
+.search-text {
+  width: 300px;
+  padding: 5px;
+}
 
-
+/*global*/
 @media only screen and (max-width: 992px) {
   .sidey {
     position: static !important;
