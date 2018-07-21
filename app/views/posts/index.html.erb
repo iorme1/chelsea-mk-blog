@@ -1,6 +1,6 @@
-<br>
 <% if current_user && current_user.admin? %>
-  <div class="col-md-4 text-center create-post-btn">
+  <br>
+  <div class="col-md-12 text-center create-post-btn">
     <%= link_to "Create New Post", new_post_path, class: "btn btn-lg cool-btn" %>
   </div><br>
 <% end %>
