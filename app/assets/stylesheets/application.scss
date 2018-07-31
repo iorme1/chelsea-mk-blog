@@ -227,11 +227,23 @@ body.posts.show > .navbar {
 .create-post-btn {
   margin: 0 auto;
 }
-
 /* global */
-.search-text {
-  width: 300px;
+.search-blogs {
+  width: 250px;
   padding: 5px;
+  vertical-align:middle;
+}
+/* global */
+.search-fail {
+  margin-top: 20px;
+}
+
+.search-blogs {
+  border: 1px solid #ea9fd7;
+}
+
+.blog {
+  
 }
 
 /*global*/
@@ -240,6 +252,11 @@ body.posts.show > .navbar {
     position: static !important;
 
   }
+
+  .search-container {
+    text-align: center !important;
+  }
+
   .cover-image {
     margin-bottom: 20px;
     text-align: left;

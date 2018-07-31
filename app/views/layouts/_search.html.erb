@@ -1,6 +1,10 @@
-<div class="top-marg text-center search-container">
-  <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search Blogs...", class: "search-text" %>
-      <%= submit_tag "Search", :name => nil, class: "cool-btn btn-sm btn", style: "margin: 10px;" %>
-  <% end %>
+<%= form_tag(posts_path, :method => "get", id: "search-form", class: "top-marg") do %>
+<div class="search-container text-left">
+  <div class="row">
+    <div class="col-md-12">
+      <%= text_field_tag :search, params[:search], placeholder: "Search Blogs...",  class: "search-blogs" %>
+      <%= submit_tag "Search", :name => nil, class: "cool-btn btn", style: "" %>
+    </div>
+  </div>
 </div>
+<% end %>

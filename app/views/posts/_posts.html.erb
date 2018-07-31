@@ -1,5 +1,5 @@
 <% if @posts.blank? %>
-  <h4 class="comment-notes">Cannot find any blog posts containing the word: <%= params[:search] %></h4>
+  <h4 class="comment-notes search-fail">Cannot find any blog posts containing the word "<%= params[:search] %>"</h4>
 <% end %>
 <div class="top-marg main-container container-fluid">
   <div class="text-center sticky-top float-lg-right sidey col-md-8 col-lg-3 col-sm-8 col-xs-12">
@@ -13,7 +13,7 @@
     <p class="comment-notes">(Coming soon!)</p><br>
   </div>
 
-  <div class="row">
+  <div class="row blog-container">
     <% @posts.each do |post| %>
       <div class="row blog">
         <div class="col-lg-5 col-md-5 col-xs-12">
