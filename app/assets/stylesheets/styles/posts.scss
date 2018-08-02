@@ -1,0 +1,97 @@
+body.posts.show > .navbar {
+  height: 60px;
+}
+
+.sidey {
+  padding-top: 25px;
+  border: 1px solid black;
+  background-image: url('navbar.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.title-font {
+  font-family: "Georgia";
+  font-size: 30px;
+  letter-spacing: 4px;
+  color: #ea9fd7;
+  font-weight: bold;
+  text-shadow: 0.8px 1.6px 2.1px black;
+}
+
+.comment-notes {
+  font-family: "Georgia";
+  color: #ea9fd7;
+  font-weight: bold;
+  text-shadow: 0.6px 1.1px 1.6px black;
+  letter-spacing: 2px;
+}
+
+.comment-section {
+  padding: 20px;
+}
+
+.read-post-btn-div {
+  margin-bottom: 20px;
+}
+
+.post-show-blog {
+  margin-top: 20px;
+  padding: 35px;
+}
+
+.post-show-blog > h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.cover-image {
+  height: auto;
+  width: 100%;;
+  padding: 0px;
+}
+
+.media-name {
+  font-family: "Georgia";
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 2px 3px black;
+}
+
+.image-div {
+  height: 225px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.blog:after {
+  content: "";
+  border: 1px solid #ea9fd7;
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.facebook {
+  border:1px solid black;
+  box-shadow:1px 1px 2px 3px black;
+}
+
+.nav-link-font {
+  font-family: "Georgia" !important;
+  color: white !important;
+  font-size: 16px;
+  font-weight: bold !important;
+  text-shadow: 0.7px 1.5px 2.1px black;
+}
+
+.create-post-btn {
+  margin: 0 auto;
+}

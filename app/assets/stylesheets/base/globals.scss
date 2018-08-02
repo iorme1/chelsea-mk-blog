@@ -1,0 +1,159 @@
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.cool-btn {
+  border-color: #ea9fd7;
+  color: #ea9fd7;
+  background: {
+    position: 100%;
+    size: 400%;
+    color:white;
+  }
+  transition: background 300ms ease-in-out;
+  &:hover {
+    background: #ea9fd7;
+    color:white;
+  }
+}
+
+.cust-nav-item {
+  border-bottom: 2px ridge white;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.navbar-font {
+  font-family: "Georgia" !important;
+  color: white !important;
+  font-size: 30px;
+  font-weight: bold !important;
+  text-shadow: 1px 2px 3px black;
+}
+
+.nav-link:hover {
+  color: #ea9fd7 !important;
+}
+
+.navbar-brand:hover {
+  color: #ea9fd7 !important;
+}
+
+.navvy {
+  background-image: url('navbar.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255,102,203);
+  background-color: white;
+}
+
+.bottom-border {
+  border-bottom: 1px solid #3458b5;  /*pink; */
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.top-marg {
+  margin-top: 20px;
+}
+
+.devise-forms {
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin-top: 20px;
+  width: 300px;
+  padding: 20px;
+  background-image: url('navbar.png');
+  background-size: cover;
+  -webkit-box-shadow: 2px 2px 4px 5px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    2px 2px 4px 5px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         2px 2px 4px 5px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.devise-title-font {
+  font-family: "Georgia";
+  font-size: 30px;
+  font-style: italic;
+  letter-spacing: 4px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0.8px 1.6px 2.1px black;
+}
+
+.search-blogs {
+  width: 250px;
+  padding: 5px;
+  vertical-align:middle;
+}
+
+.search-fail {
+  margin-top: 20px;
+}
+
+.search-blogs {
+  border: 1px solid #ea9fd7;
+}
+
+@media only screen and (max-width: 992px) {
+  .sidey {
+    position: static !important;
+  }
+
+  .search-container {
+    text-align: center !important;
+  }
+
+  .cover-image {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .main-container {
+    padding: 50px;
+  }
+
+  .preview-div {
+    margin-top: 20px;
+    text-align: left;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  .image-div {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .preview-blog-text > p {
+    text-align: left center;
+  }
+  .navvy {
+    height: auto !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .preview-div {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .main-container {
+    padding: 0px;
+  }
+}
