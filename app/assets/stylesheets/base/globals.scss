@@ -114,7 +114,7 @@ body {
 
 }
 
-@media only screen and (max-width: 992px) {
+@media all and (max-width: 992px) {
   .sidey {
     position: static !important;
     width: 75%;
@@ -157,7 +157,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media all and (max-width: 767px) {
   .preview-div {
     padding-left: 50px;
     padding-right: 50px;
