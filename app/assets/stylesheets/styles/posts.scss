@@ -3,7 +3,7 @@ body.posts.show > .navbar {
 }
 
 .sidey {
-  padding-top: 25px;
+  padding: 25px;
   border: 1px solid black;
   background-image: url('navbar.png');
   background-repeat: no-repeat;
@@ -70,10 +70,14 @@ body.posts.show > .navbar {
   margin: 0 auto;
 }
 
+.blog {
+  padding-right: 15px;
+}
+
 .blog:after {
   content: "";
   border: 1px solid #ea9fd7;
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
   margin-bottom: 30px;
   display: block;
