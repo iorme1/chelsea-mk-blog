@@ -8,6 +8,6 @@ class Post < ApplicationRecord
   mount_uploader :cover, BlogImageUploader
 
   def self.search(search)
-    where("title LIKE ? OR body LIKE ?", "%#{search}%", "%#{search}%")
+    where("title ILIKE ? OR body ILIKE ?", "%#{search}%", "%#{search}%")
   end
 end
