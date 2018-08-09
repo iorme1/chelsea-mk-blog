@@ -29,6 +29,11 @@ body.posts.show > .navbar {
   letter-spacing: 2px;
 }
 
+.show-comments {
+  font-size: 20px;
+  color: #ea9fd7;
+}
+
 .comment-section {
   padding: 20px;
 }
@@ -55,11 +60,16 @@ body.posts.show > .navbar {
 
 .media-name {
   font-family: "Georgia";
-  font-size: 24px;
+  font-size: 22px;
   letter-spacing: 4px;
   color: white;
   font-weight: bold;
   text-shadow: 1px 2px 3px black;
+}
+
+.blog-banner {
+  padding: 25px !important;
+  margin: 0 auto;
 }
 
 .image-div {

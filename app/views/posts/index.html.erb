@@ -1,8 +1,19 @@
+<br>
+<div class="row">
+    <div class="col-md-12">
+        <div class="jumbotron text-center blog-banner">
+            <h1 class="comment-notes">Featured Blog Posts</h1>
+            <%= render 'search' %>
+        </div>
+    </div>
+</div><br>
+
 <% if current_user && current_user.admin? %>
-  <br>
-  <div class="col-md-12 text-center create-post-btn">
-    <%= link_to "Create New Post", new_post_path, class: "btn btn-lg cool-btn" %>
-  </div><br>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <%= link_to "Create New Post", new_post_path, class: "btn btn-lg cool-btn create-post-btn" %>
+        </div>
+    </div><br>
 <% end %>
 
 <%= render 'posts' %>

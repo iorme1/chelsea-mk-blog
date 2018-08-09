@@ -8,7 +8,7 @@
     <div class="post-show-blog">
       <h1 class="title-font font-italic"><%= @post.title %></h1>
       <p><%= raw @post.body %></p>
-      <%= link_to "Show comments", post_path(@post), class: "comments#{@post.id}", remote: true %>
+      <h2 class="comment-notes"><%= link_to "Show comments", post_path(@post), class: "comments#{@post.id} show-comments", remote: true %></h2>
       <p class="text-muted"><%= @post.comments.size %> comments</p>
       <div class="comments-display<%=@post.id%>"></div>
     </div>
@@ -17,6 +17,6 @@
   <% if current_user %>
     <%= render 'comments/form', comment: Comment.new, post: @post %>
   <% else %>
-    <h4 class="comment-notes font-italic">Please sign up to comment</h4><br>
+    <h3 class="comment-notes font-italic">Please sign up to comment</h3><br>
   <% end %>
 </main>
