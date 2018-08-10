@@ -17,6 +17,6 @@
   <% if current_user %>
     <%= render 'comments/form', comment: Comment.new, post: @post %>
   <% else %>
-    <h3 class="comment-notes font-italic">Please sign up to comment</h3><br>
+    <h3 class="comment-notes font-italic">You must be signed in to comment</h3><br>
   <% end %>
 </main>
