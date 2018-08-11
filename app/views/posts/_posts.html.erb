@@ -9,7 +9,7 @@
                     <!-- post image -->
                     <div class="col-md-5 col-lg-5">
                       <div class="image-div">
-                        <%= image_tag(post.cover.url, class: "cover-image") if post.cover? %>
+                        <%= image_tag(post.cover.url, alt: "Cover Image for #{post.title}", class: "cover-image") if post.cover? %>
                       </div><br>
                       <% if current_user && current_user.admin? %>
                           <div class="text-center">
