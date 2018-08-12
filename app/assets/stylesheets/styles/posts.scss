@@ -53,8 +53,9 @@ body.posts.show > .navbar {
 }
 
 .cover-image {
-  height: auto;
-  width: 100%;;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   padding: 0px;
 }
 
@@ -78,6 +79,9 @@ body.posts.show > .navbar {
   overflow: hidden;
   text-align: center;
   margin: 0 auto;
+  -moz-box-shadow: 1px 1px 2px 3px black;
+  -webkit-box-shadow: 1px 1px 2px 3px black;
+  box-shadow: 1px 1px 2px 3px black;
 }
 
 .blog {
